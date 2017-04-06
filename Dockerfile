@@ -1,4 +1,4 @@
-FROM centos:7
+FROM ajeetraina/centos7-arm
 RUN rpm -Uvh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
 RUN yum install -y nginx --nogpgcheck
 #RUN echo "daemon off;" >> /etc/nginx/nginx.conf
