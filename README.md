@@ -1,5 +1,4 @@
-# k8s-helloworld
+# k8s-helloworld-arm
  
 yet another hello world
 
-index with autorefresh 3 sec 
