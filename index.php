@@ -1,9 +1,3 @@
-<html>
-<h1><?php
-  echo "Hello World! k8s edition<p>";
-  echo "k8s Pod IP Address Is: " . $_SERVER['SERVER_ADDR'] . "<br>"; 
-?></h1>
-
 <?php
   header("Cache-Control: no-cache, must-revalidate");
 	header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
@@ -96,21 +90,22 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<head>
 		<meta charset="UTF-8">
-		<title>System Information</title>
+		<title>Kubernetes System Information</title>
 		<style type="text/css">
 			body {
-				margin:50px 0px; padding:0px;
+				margin:20px 0px; padding:0px;
 				text-align:center;
 				}
 			#Content {
-				width:320px;
+				width:400px;
 				margin:0px auto;
 				text-align:left;
 				padding:15px;
 				border:1px dashed #333;
-				background-color:#eee;
+				background-color:#FFFFFF;
 			}
 			a {
 				color:black;
@@ -134,7 +129,7 @@
 			}
 			h1 {
 				font-family:"DejaVu Sans", Arial, Helvetica, sans-serif;
-				font-size:20px;
+				font-size:15px;
 				text-align:center;
 			}
 			td.center {
@@ -150,11 +145,11 @@
 				padding-right:6px;
 			}
 			table {
-				width: 320px; border-spacing:0;
+				width: 400px; border-spacing:0;
 				border-collapse:collapse;
 			}
 			html,body,.darkbackground {
-				background:#CCCCCC;
+				background:#FFFFFF;
 			}
 			body {
 				color:#000000;
@@ -238,15 +233,15 @@
 	</head>
 	<body onload="Javascript: updateDisplay();">
 	<div id="Content">
-	<h1>POD</h1><h1>System Information</h1>
-                <table>
-                        <tr>
-                                <td class="center darkbackground"><a href="javascript:location.reload(true);" title="Refresh">Refresh</a></td>
-                        </tr>
-                </table>
+	<h1>Hello World</h1>
+	<h1>Kubernetes POD System Information</h1>
+	<h1><?php
+  		echo "Pod IP Address Is: " . $_SERVER['SERVER_ADDR'] . "<br>"; 
+	    ?></h1>
+
 		<table>
 			<tr>
-				<td colspan="4" class="head center">General Info</td>
+				<td colspan="4" class="head center"><a href="javascript:location.reload(true);" title="Refresh">Refresh</a></td>
 			</tr>
 			<tr>
 				<td colspan="2">Hostname</td>
@@ -264,7 +259,7 @@
 				<td colspan="2">Processor</td>
 				<td colspan="2" id="processor"></td>
 			</tr>
-      			<tr>
+			<tr>
 				<td colspan="2">CPU Frequency</td>
 				<td colspan="2" id="freq"></td>
 			</tr>
@@ -374,6 +369,3 @@
 	</div>
 	</body>
 </html>
-
-</html>
-
