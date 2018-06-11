@@ -1,0 +1,6 @@
+kind: "Namespace"
+apiVersion: "v1"
+metadata:
+  name: "gke-ethzero-hello"
+  labels:
+    name: "gke-ethzero-hello"
