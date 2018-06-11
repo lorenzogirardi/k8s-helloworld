@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: k8s-helloworld-ingress
+  namespace: gke-ethzero-hello
+  annotations:
+    ingress.kubernetes.io/proxy-connect-timeout: "10"
+    ingress.kubernetes.io/proxy-read-timeout: "30"
+    ingress.kubernetes.io/proxy-send-timeout: "30"
+spec:
+  rules:
+  - host: hello.ethzero.it
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: k8s-helloworld-svc
+          servicePort: 80
