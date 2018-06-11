@@ -4,7 +4,7 @@ metadata:
   name: k8s-helloworld
   namespace: gke-ethzero-hello
 spec:
-  replicas: 1
+  replicas: 6
   strategy:
     type: RollingUpdate
   revisionHistoryLimit: 10
